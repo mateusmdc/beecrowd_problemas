@@ -2,8 +2,8 @@
 // When executing the code locally Remeber to:
 //  -> remove the . before /dev and 'txt' after stdin when submitting to beecrowd (or when uploading to github, but that is optional)
 var input = require('fs').readFileSync('./dev/stdin.txt', 'utf8');
-var lines = input.split('\n');
+var lines = input.trim().split(' ');
 
-const [a,b] = [...lines.map(Number)];
+const [a,b,c] = [...lines.map(Number)];
 
-console.log(`${(a/b).toFixed(3)} km/l`);
+console.log(`${Math.max( a, b, c)} eh o maior`)
