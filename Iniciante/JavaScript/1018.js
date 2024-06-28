@@ -4,6 +4,8 @@
 var input = require('fs').readFileSync('./dev/stdin.txt', 'utf8');
 var lines = input.trim().split('\n');
 
+lines = parseFloat(lines);
+
 console.log(`${lines}`);
 console.log(`${Math.floor(lines/100)} nota(s) de R$ 100,00`);
 console.log(`${Math.floor((lines%100)/50)} nota(s) de R$ 50,00`);
