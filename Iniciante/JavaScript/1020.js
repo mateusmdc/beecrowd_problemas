@@ -4,6 +4,8 @@
 var input = require('fs').readFileSync('./dev/stdin.txt', 'utf8');
 var lines = input.trim().split('\n');
 
+lines = parseInt(lines);
+
 console.log(`${Math.floor(lines/365)} ano(s)`);
 console.log(`${Math.floor((lines%365)/30)} mes(es)`);
 console.log(`${Math.floor((lines%365)%30)} dia(s)`);
