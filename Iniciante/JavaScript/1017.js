@@ -4,6 +4,6 @@
 var input = require('fs').readFileSync('./dev/stdin.txt', 'utf8');
 var lines = input.trim().split('\n');
 
-const [a,b] = [...lines];
+const [a,b] = [...lines.map(item => parseInt(item))];
 
 console.log(`${((a*b)/12).toFixed(3)}`);
