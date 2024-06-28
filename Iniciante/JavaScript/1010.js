@@ -4,12 +4,12 @@
 var input = require('fs').readFileSync('./dev/stdin.txt', 'utf8');
 var lines = input.split('\n');
 
-var values = []
+var values = [];
 
 lines.forEach(l => {
-    values.push(l.trim().split(" "))
+    values.push(l.trim().split(" "));
 })
 
-const [a,b,c,d,e,f] = [...values[0], ...values[1]]
+let [a,b,c,d,e,f] = [...values[0].map(Number), ...values[1].map(Number)];
 
-console.log(`VALOR A PAGAR: R$ ${((b*c)+(e*f)).toFixed(2)}`)
+console.log(`VALOR A PAGAR: R$ ${((b*c)+(e*f)).toFixed(2)}`);
